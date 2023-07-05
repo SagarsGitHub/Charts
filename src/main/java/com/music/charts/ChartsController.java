@@ -19,16 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.Base64;
-
+import java.io.File;  // Import the File class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.Scanner; // Import the Scanner class to read text files
 @RestController
 public class ChartsController {
 
-    private static final String clientId = "c49891ad14a249c68daa28d26a019b2c";
-    private static final String clientSecret = "f6afac8ee2f048f58c5e24e1799bf231";
+    private static final String clientId = "*****";
+    private static final String clientSecret = "*****";
 
     private static final URI redirectUri = SpotifyHttpManager.makeUri("http://localhost:8081/callback");
 
